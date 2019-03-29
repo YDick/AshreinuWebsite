@@ -12,7 +12,7 @@ class CreateFundraisers < ActiveRecord::Migration[5.2]
       t.integer :cell
       t.string :email
       t.string :username
-      t.string :password
+      t.string :password_digest
       t.integer :goal
       t.text :summary
       t.string :photo_main

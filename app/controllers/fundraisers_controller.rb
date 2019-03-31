@@ -10,7 +10,7 @@ class FundraisersController < ApplicationController
     end
 
     def create
-        @fundraiser = Fundraiser.new(params[:fundraiser])
+        @fundraiser = Fundraiser.new(fundraiser_params)
 
         if @fundraiser.save
           flash[:notice] = "You signed up successfully"
@@ -19,9 +19,14 @@ class FundraisersController < ApplicationController
           flash[:notice] = "Form is invalid"
           flash[:color]= "invalid"
         end
-        
+
         render "new"
       
     end
     
+
+    private
+    def fundraiser_params
+      params.require(:fundraiser).permit(:email, :username, :password)
+    end
 end

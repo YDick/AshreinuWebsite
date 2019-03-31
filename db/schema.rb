@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2019_03_29_005849) do
     t.integer "cell"
     t.string "email"
     t.string "username"
-    t.string "encrypted_password"
+    t.string "password_digest"
     t.integer "goal"
     t.text "summary"
     t.string "photo_main"

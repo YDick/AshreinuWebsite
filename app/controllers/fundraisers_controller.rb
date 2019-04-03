@@ -1,7 +1,13 @@
 class FundraisersController < ApplicationController
 
     def index
-      @fundraisers = Fundraiser.all
+      if current_user
+        @fundraisers = Fundraiser.all
+        render “index.html.erb”
+      else
+        flash[:warning] = "You must be logged in to see this page"
+        redirect_to "/login"
+      end
     end
 
     def show
@@ -25,10 +31,22 @@ class FundraisersController < ApplicationController
           flash[:color]= "invalid"
           render "new"
         end
-        return @fundraiser.errors.full_messages
-      
+          return @fundraiser.errors.full_messages
     end
     
+    def edit 
+      @fundraiser = Fundraiser.find(params[:id])
+    end
+
+    def update
+      @fundraiser = Fundraiser.find(params[:id])
+
+      if @fundraiser.update_attributes(fundraiser_params)
+        redirect_to picture_url(@fundraiser)
+      else
+          render :edit
+      end
+    end
 
     private
     def fundraiser_params

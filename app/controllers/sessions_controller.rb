@@ -7,12 +7,13 @@ class SessionsController < ApplicationController
 
     if u && u.authenticate(params[:session][:password])
       # Put on the wristband
+
       session[:fundraiser_id] = u.id
 
-    #   flash: 'Access granted!'
+    #   flash.notice = 'Access granted!'
       redirect_to root_url
     else
-    #   flash: 'Email or password invalid!'
+        # flash[:warning] = 'Email or password invalid!'
       render :new
     end
   end
@@ -21,7 +22,7 @@ class SessionsController < ApplicationController
     # Cut the wristband
     session[:fundraiser_id] = nil
 
-    # flash: 'Successfully logged out'
+    # flash[:success] = 'Successfully logged out'
     redirect_to root_url
   end
 

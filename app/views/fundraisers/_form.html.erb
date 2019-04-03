@@ -1,18 +1,21 @@
 
 
- <%= form_for(:fundraiser, :url => {:controller => 'fundraisers', :action => 'create'}) do |f| %>
+ <%= form_for(@fundraiser) do |f| %>
 
 
     <p> First Name:</br> <%= f.text_field :fname %> </p>
     <p> Last Name:</br> <%= f.text_field :lname %> </p>
     <p> Username:</br> <%= f.text_field :username %> </p>
-    <p> Country:</br> <%= f.country_select :country %> </p>
+    <p> Country:</br> <%= f.country_select :country, priority_countries: ["CA", "US", "IL"] %> </p>
 
     <p> Email:</br> <%= f.text_field :email %> </p>
 
-    <p> Password:</br> <%= f.password_field :password %></p>
+    <p> Fundraising Goal:</br> $<%= f.number_field :goal, value: "3600", min: '10', step: '10' %> </p>
+
+    <br><p> Password:</br> <%= f.password_field :password  %></p>
 
     <p> Password confirm:</br> <%= f.password_field :password_confirmation %></p>
+
 
 
     <%= f.submit "Submit!" %>

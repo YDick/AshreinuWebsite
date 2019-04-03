@@ -4,6 +4,10 @@ class FundraisersController < ApplicationController
       @fundraisers = Fundraiser.all
     end
 
+    def show
+      @fundraiser = Fundraiser.find(params[:id])
+    end
+
 
     def new
         @fundraiser = Fundraiser.new 
@@ -13,12 +17,12 @@ class FundraisersController < ApplicationController
         @fundraiser = Fundraiser.new(fundraiser_params)
 
         if @fundraiser.save
-          # flash[:notice] = "You signed up successfully"
-          # flash[:color]= "valid"
+          flash[:notice] = "You signed up successfully"
+          flash[:color]= "valid"
           redirect_to fundraisers_url
         else
-          # flash[:notice] = "Form is invalid"
-          # flash[:color]= "invalid"
+          flash[:notice] = "Form is invalid"
+          flash[:color]= "invalid"
           render "new"
         end
         return @fundraiser.errors.full_messages

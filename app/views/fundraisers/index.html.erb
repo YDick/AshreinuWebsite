@@ -3,11 +3,11 @@
 
 <% @fundraisers.each do |t| %>
 
-    <%= t.fname %>
+    <%= link_to t.full_name, fundraisers_url %>
     
 <% end %>
 
 <% if false %>
-    -problems with full_name method
+
     -link_to raiser
 <% end %>

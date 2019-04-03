@@ -13,20 +13,21 @@ class FundraisersController < ApplicationController
         @fundraiser = Fundraiser.new(fundraiser_params)
 
         if @fundraiser.save
-          flash[:notice] = "You signed up successfully"
-          flash[:color]= "valid"
+          # flash[:notice] = "You signed up successfully"
+          # flash[:color]= "valid"
+          redirect_to fundraisers_url
         else
-          flash[:notice] = "Form is invalid"
-          flash[:color]= "invalid"
+          # flash[:notice] = "Form is invalid"
+          # flash[:color]= "invalid"
+          render "new"
         end
-
-        render "new"
+        return @fundraiser.errors.full_messages
       
     end
     
 
     private
     def fundraiser_params
-      params.require(:fundraiser).permit(:email, :username, :password)
+      params.require(:fundraiser).permit(:fname, :lname, :email, :username, :password)
     end
 end

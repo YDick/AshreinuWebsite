@@ -1,13 +1,13 @@
 class FundraisersController < ApplicationController
 
     def index
-      if current_user
+      # if current_user
         @fundraisers = Fundraiser.all
-        render “index.html.erb”
-      else
-        flash[:warning] = "You must be logged in to see this page"
-        redirect_to "/login"
-      end
+        render :index
+      # else
+      #   flash[:warning] = "You must be logged in to see this page"
+      #   redirect_to "/login"
+      # end
     end
 
     def show
@@ -42,7 +42,7 @@ class FundraisersController < ApplicationController
       @fundraiser = Fundraiser.find(params[:id])
 
       if @fundraiser.update_attributes(fundraiser_params)
-        redirect_to picture_url(@fundraiser)
+        redirect_to fundraiser_url(@fundraiser)
       else
           render :edit
       end

@@ -11,9 +11,10 @@ class SessionsController < ApplicationController
       session[:fundraiser_id] = u.id
 
     #   flash.notice = 'Access granted!'
-      redirect_to root_url
+      redirect_to root_url, notice: "yay"
     else
         # flash[:warning] = 'Email or password invalid!'
+        flash.now.alert = "Email or password is invalid."
       render :new
     end
   end

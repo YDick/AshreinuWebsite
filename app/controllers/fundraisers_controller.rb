@@ -23,6 +23,7 @@ class FundraisersController < ApplicationController
         @fundraiser = Fundraiser.new(fundraiser_params)
 
         if @fundraiser.save
+          session[:fundraiser_id] = @fundraiser.id #to login fundie
           flash[:notice] = "You signed up successfully"
           flash[:color]= "valid"
           redirect_to fundraisers_url

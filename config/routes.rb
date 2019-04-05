@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :fundraisers
 
-  resource :sessions, only: %i(new create destroy)
+  resource :session, only: %i(new create destroy)
 
   get "/login" => "sessions#new"
   post "/login" => "sessions#create"

@@ -30,23 +30,17 @@
   }
 
   .navbar a {
+    width: fit-content;
     float: left;
-    color: black;
+    color:black;
     text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
 }
 
-    .navbar ul {
-        display: flex;
-        flex-direction: row;
-        padding: 10px 20px;
-    }
-
     li {
-        border: 1px black solid;
-        border-radius: 20px;
-        padding: 10px 30px;
+        /* border: 1px grey solid; */
+        /* border-radius: 20px; */
+        /* padding: 10px 30px; */
     }
     

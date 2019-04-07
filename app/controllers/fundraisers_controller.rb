@@ -42,8 +42,11 @@ class FundraisersController < ApplicationController
     def update
       @fundraiser = Fundraiser.find(params[:id])
 
-      if @fundraiser.update_attributes(fundraiser_params)
+      if current_user == @fundraiser 
+        @fundraiser.update_attributes(fundraiser_params)
         redirect_to fundraiser_url(@fundraiser)
+      # elsif current_user != @fundraiser
+      #   flash[:notice] = "Must be logged in to edit"
       else
           render :edit
       end

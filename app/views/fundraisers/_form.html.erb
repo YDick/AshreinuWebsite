@@ -8,7 +8,7 @@
     <p> Username:</br> <%= f.text_field :username %> </p>
     <p> Country:</br> <%= f.country_select :country, priority_countries: ["CA", "US", "IL"] %> </p>
 
-    <p> Email:</br> <%= f.text_field :email %> </p>
+    <p> Email:</br> <%= f.email_field :email %> </p>
 
     <p> Fundraising Goal:</br> $<%= f.number_field :goal, value: "3600", min: '10', step: '10' %> </p>
 

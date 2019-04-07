@@ -16,28 +16,41 @@
   <body>    
   
       <% if current_user %>
-        Logged in as <%= current_user.full_name %>.<br>
-        <%= link_to "Log Out", session_path("current"), method: "delete" %> 
+        <div class = "text-right">
+          Logged in as <%= current_user.full_name%>. | 
+          <%= link_to "Log Out", session_path("current"), method: "delete"%> 
+        </div>
+
       <% else %>
-        <%= link_to "Log In", new_session_path %><br>
-        <%= link_to "Sign Up as a Fundraiser", new_fundraiser_path %>
+      <div class = "text-right">
+        <%= link_to "Log In", new_session_path, class: "text-left" %> |
+        <%= link_to "Sign Up as a Fundraiser", new_fundraiser_path, class: "text-left" %>
+      </div>
+
       <% end %>
 
+      
+    <nav class="navbar navbar-expand-md style="background-color: #e3f2fd; ">
+      <ul class="nav  nav-full">
+        <li class = "nav-item">
+          <a class="nav-link active" href="">Home</a>
+        </li>
 
+        <li class = "nav-item">
+          <a class="nav-link" href="">About</a>
+        </li>
 
-    <div class = "navbar" >
-      <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="">About</a></li>
+        <li class = "nav-item">
+          <a class="nav-link" href=<%= fundraisers_path%> >Fundraisers</a>
+        </li>
 
-        <li><a href=<%= fundraisers_path%> >Fundraisers</a></li>
-        <li><a href="">Sponser</a></li>
-        
+        <li class = "nav-item">
+          <a class="nav-link" href="">Sponser</a>
+        </li>
       </ul>
-    </div>
+    </nav>
 
-
- 
+    
       <% flash.each do |name, msg| %>
         <%= content_tag :div, msg, class: "alert alert-info" %>
       <% end %>

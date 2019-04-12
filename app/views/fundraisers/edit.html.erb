@@ -2,3 +2,6 @@
 
 
     <%= render partial: 'form' %>
+
+    <%= link_to "delete this user", fundraiser_path(@fundraiser), method: :delete, 
+    data: {confirm: "are you sure you want to delete?"} %>

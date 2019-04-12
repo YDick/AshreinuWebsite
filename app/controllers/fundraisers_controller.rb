@@ -1,6 +1,7 @@
 class FundraisersController < ApplicationController
 
   before_action :require_login, except: [:index, :new, :create, :show]
+  before_action :require_ownership, only: [:edit, :update, :destroy]
 
     def index
         @fundraisers = Fundraiser.all
@@ -46,15 +47,26 @@ class FundraisersController < ApplicationController
       end
     end
 
+
+    private
+    def fundraiser_params
+      params.require(:fundraiser).permit(:fname, :lname, :email, :username, :password)
+    end
+
     def require_login
       unless session[:user_id]
         flash[:error] = "You must be logged in to access this section"
         redirect_to new_session_path
       end
     end
-    private
-    def fundraiser_params
-      params.require(:fundraiser).permit(:fname, :lname, :email, :username, :password)
+
+    def require_ownership
+      @fundraiser = Fundraiser.find(params[:id])
+
+      unless @fundraiser == current_user
+        flash[:error] = "You are not the correct user"
+        redirect_to root_path
+      end
     end
 
 

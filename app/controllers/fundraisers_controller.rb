@@ -1,13 +1,9 @@
 class FundraisersController < ApplicationController
 
+  before_action :require_login, except: [:index, :new, :create, :show]
+
     def index
-      # if current_user
         @fundraisers = Fundraiser.all
-        render :index
-      # else
-      #   flash[:warning] = "You must be logged in to see this page"
-      #   redirect_to "/login"
-      # end
     end
 
     def show
@@ -42,18 +38,24 @@ class FundraisersController < ApplicationController
     def update
       @fundraiser = Fundraiser.find(params[:id])
 
-      if current_user == @fundraiser 
-        @fundraiser.update_attributes(fundraiser_params)
+      if @fundraiser.update_attributes(fundraiser_params)
         redirect_to fundraiser_url(@fundraiser)
-      # elsif current_user != @fundraiser
-      #   flash[:notice] = "Must be logged in to edit"
+ 
       else
           render :edit
       end
     end
 
+    def require_login
+      unless session[:user_id]
+        flash[:error] = "You must be logged in to access this section"
+        redirect_to new_session_path
+      end
+    end
     private
     def fundraiser_params
       params.require(:fundraiser).permit(:fname, :lname, :email, :username, :password)
     end
+
+
 end

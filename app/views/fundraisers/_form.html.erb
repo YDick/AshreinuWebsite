@@ -5,7 +5,10 @@
 
     <p> First Name:</br> <%= f.text_field :fname %> </p>
     <p> Last Name:</br> <%= f.text_field :lname %> </p>
-    <p> Username:</br> <%= f.text_field :username %> </p>
+      <% if @fundraiser.new_record? %>
+        <p> Username:</br> <%= f.text_field :username %> </p>   
+      <% end %>
+
     <p> Country:</br> <%= f.country_select :country, priority_countries: ["CA", "US", "IL"] %> </p>
 
     <p> Email:</br> <%= f.email_field :email %> </p>

@@ -3,4 +3,6 @@
 
 <%if current_user == @fundraiser %>
     <%= link_to "Edit", edit_fundraiser_path %>
+    <%= link_to "Delete this User", fundraiser_path(@fundraiser), method: :delete, 
+    data: {confirm: "are you sure you want to delete?"} %>
 <% end %>

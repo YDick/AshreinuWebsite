@@ -15,6 +15,10 @@
 
     <p> Fundraising Goal:</br> $<%= f.number_field :goal, value: "3600", min: '10', step: '10' %> </p>
 
+    <% unless @fundraiser.new_record? %>
+        <p> Old Password:</br> <%= f.password_field :old_password %> </p>   
+      <% end %>
+
     <br><p> Password:</br> <%= f.password_field :password  %></p>
 
     <p> Password confirm:</br> <%= f.password_field :password_confirmation %></p>

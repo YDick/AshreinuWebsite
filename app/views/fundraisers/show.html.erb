@@ -1,5 +1,13 @@
 <h1> <%= @fundraiser.full_name %> </h1>
 
+<p>
+<%= @fundraiser.goal %>
+<%= @fundraiser.username %>
+
+</p>
+
+
+
 
 <%if current_user == @fundraiser %>
     <%= link_to "Edit", edit_fundraiser_path %>

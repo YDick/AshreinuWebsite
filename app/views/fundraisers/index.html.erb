@@ -1,6 +1,6 @@
     <h1>Find a Raiser!</h1>
 
-<% if @fundraisers.any? %>
+<% if @fundraisers.count>0 %>
     <% @fundraisers.each do |t| %>
 
         <%= link_to t.full_name, fundraiser_url(t) %>

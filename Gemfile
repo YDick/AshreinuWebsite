@@ -30,6 +30,9 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'country_select', '~> 4.0'
 
+gem 'devise'
+gem 'omniauth-google-oauth2', '~> 0.2.2'
+
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'

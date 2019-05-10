@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_29_005849) do
+ActiveRecord::Schema.define(version: 2019_04_28_153508) do
 
   create_table "fundraisers", force: :cascade do |t|
     t.string "fname"
@@ -33,6 +33,11 @@ ActiveRecord::Schema.define(version: 2019_03_29_005849) do
     t.string "how_heard"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "provider"
+    t.string "token"
+    t.string "expires_at"
+    t.boolean "expires"
+    t.string "refresh_token"
   end
 
 end

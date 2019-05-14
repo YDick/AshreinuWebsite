@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_28_153508) do
+ActiveRecord::Schema.define(version: 2019_05_14_222612) do
 
   create_table "fundraisers", force: :cascade do |t|
     t.string "fname"
@@ -38,6 +38,14 @@ ActiveRecord::Schema.define(version: 2019_04_28_153508) do
     t.string "expires_at"
     t.boolean "expires"
     t.string "refresh_token"
+  end
+
+  create_table "places", force: :cascade do |t|
+    t.string "name"
+    t.decimal "latitude"
+    t.decimal "longitude"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

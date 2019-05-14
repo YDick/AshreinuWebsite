@@ -7,6 +7,15 @@
 
 <body>
 <h2>Day Camp</h2>
+<p>
+Ashreinu Day Camp is located in Bais Yaakov High School's spacious building, located at 410 Lawrence Ave. W.
+</p>
+
+<p>
+<%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=17&size=400x300&markers=size:small%7Ccolor:red%7C#{@place.latitude},#{@place.longitude}&key=#{Rails.application.credentials.google_maps_api_key}", alt: "Map" %>
+</p>
+
+<%if false%>
 <div id="map" class="map"></div>
 <script type="text/javascript">
   var map = new ol.Map({
@@ -22,5 +31,6 @@
     })
   });
 </script>
+<% end %>
 </body>
 </html>

@@ -1,5 +1,6 @@
 class MapController < ApplicationController
   def view
-    @place = Place.find_by(name:"BJHS")
+    @bjhs = Place.find_by(name:"BJHS")
+    @overnight = Place.find_by(name:"Overnight")
   end
 end

@@ -6,14 +6,29 @@
 </head>
 
 <body>
+<div class = "daycamp_wrapper" >
 <h2>Day Camp</h2>
 <p>
 Ashreinu Day Camp is located in Bais Yaakov High School's spacious building, located at 410 Lawrence Ave. W.
 </p>
 
 <p>
-<%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=17&size=400x300&markers=size:small%7Ccolor:red%7C#{@place.latitude},#{@place.longitude}&key=#{Rails.application.credentials.google_maps_api_key}", alt: "Map" %>
+<%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=15&size=400x300&markers=size:small%7Ccolor:red%7C#{@bjhs.latitude},#{@bjhs.longitude}&key=#{Rails.application.credentials.google_maps_api_key}", alt: "Map" %>
 </p>
+</div>
+
+<vr />
+<div class = "overnight_wrapper">
+<h2>Overnight Camp</h2>
+<p>
+Featuring picturesque camp grounds, and beautiful accommodations, Ashreinu's overnight camp is located at 
+</p>
+
+<p>
+<%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=10&size=400x300&markers=size:small%7Ccolor:red%7C#{@overnight.latitude},#{@overnight.longitude}&key=#{Rails.application.credentials.google_maps_api_key}", alt: "Map" %>
+</p>
+</div>
+
 
 <%if false%>
 <div id="map" class="map"></div>

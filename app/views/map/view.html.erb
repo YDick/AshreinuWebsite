@@ -13,7 +13,7 @@ Ashreinu Day Camp is located in Bais Yaakov High School's spacious building, loc
 </p>
 
 <p>
-<%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=15&size=400x300&markers=size:small%7Ccolor:red%7C#{@bjhs.latitude},#{@bjhs.longitude}&key=#{Rails.application.credentials.google_maps_api_key}", alt: "Map" %>
+<%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=15&size=400x300&markers=size:small%7Ccolor:red%7C#{@bjhs.latitude},#{@bjhs.longitude}&key=#{ENV["google_maps_api_key"]}", alt: "Map" %>
 </p>
 </div>
 
@@ -25,7 +25,7 @@ Featuring picturesque camp grounds, and beautiful accommodations, Ashreinu's ove
 </p>
 
 <p>
-<%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=10&size=400x300&markers=size:small%7Ccolor:red%7C#{@overnight.latitude},#{@overnight.longitude}&key=#{Rails.application.credentials.google_maps_api_key}", alt: "Map" %>
+<%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=10&size=400x300&markers=size:small%7Ccolor:red%7C#{@overnight.latitude},#{@overnight.longitude}&key=#{ENV["google_maps_api_key"]}", alt: "Map" %>
 </p>
 </div>
 

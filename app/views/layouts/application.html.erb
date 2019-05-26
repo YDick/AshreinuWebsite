@@ -10,55 +10,69 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
- 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+    function myFunction() {
+  var x = document.getElementById("myNav");
+  if (x.className === "nav") {
+    x.className += " responsive";
+  } else {
+    x.className = "nav";
+  }
+}
+    </script>
 </head>
 
   <body>    
   
       <% if current_user %>
-        <div class = "text-right">
+        <div class = "login">
           Logged in as<%= link_to current_user.full_name, fundraiser_path(current_user)%> | 
           <%= link_to "Log Out", session_path("current"), method: "delete"%> 
         </div>
 
       <% else %>
-      <div class = "text-right">
-        <%= link_to "Log In", new_session_path, class: "text-left" %> |
-        <%= link_to "Sign Up as a Fundraiser", new_fundraiser_path, class: "text-left" %>
-      </div>
+        <div class = "login">
+          <%= link_to "Log In", new_session_path, class: "text-left" %> |
+          <%= link_to "Sign Up as a Fundraiser", new_fundraiser_path, class: "text-left" %>
+        </div>
 
       <% end %>
 
-      
-    <nav class="navbar navbar-expand-md style="background-color: #e3f2fd; ">
-      <ul class="nav  nav-full">
-      <li class = "nav-item">
-        <%= link_to image_tag("http://www.campashreinu.ca/wp-content/uploads/2014/01/logo.png"), root_path, class: "navbar-brand"%>
-       </li>
-        <li class = "nav-item">
-          <a class="nav-link active" href="">Home</a>
+      <nav class="navbar navbar-expand-md ">
+      <ul class="nav" id = "myNav">
+        <li id = "navbar-brand">
+          <%= link_to image_tag("http://www.campashreinu.ca/wp-content/uploads/2014/01/logo.png"), root_path %>
+         </li>
+  
+          <li class = "nav-item">
+            <a class="nav-link" href=<%= about_path %>>About</a>
+          </li>
+  
+          <li class = "nav-item">
+            <a class="nav-link" href=<%= fundraisers_path %> >Fundraisers</a>
+          </li>
+  
+          <li class = "nav-item">
+          <a class="nav-link" href=<%= map_path %>>Where We Are</a>
         </li>
-
         <li class = "nav-item">
-          <a class="nav-link" href=<%= about_path %>>About</a>
+          <a class="nav-link" href="">Blog</a>
         </li>
-
         <li class = "nav-item">
-          <a class="nav-link" href=<%= fundraisers_path %> >Fundraisers</a>
-        </li>
-
-        <li class = "nav-item">
-        <a class="nav-link" href=<%= map_path %>>Where We Are</a>
+        <a class="nav-link" href="">Contact Us</a>
       </li>
-      <li class 
-      = "nav-item">
-        <a class="nav-link" href="">Blog</a>
-      </li>
-
-      </ul>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+     </ul>
     </nav>
+
+      
 
     
       <% flash.each do |name, msg| %>

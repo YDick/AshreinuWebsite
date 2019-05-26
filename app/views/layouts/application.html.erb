@@ -24,10 +24,10 @@
 </head>
 
   <body>    
-  
+  <div class = "margin" >
       <% if current_user %>
         <div class = "login">
-          Logged in as<%= link_to current_user.full_name, fundraiser_path(current_user)%> | 
+          Logged in as <%= link_to current_user.full_name, fundraiser_path(current_user)%> | 
           <%= link_to "Log Out", session_path("current"), method: "delete"%> 
         </div>
 
@@ -39,7 +39,7 @@
 
       <% end %>
 
-      <nav class="navbar sticky-top navbar-default">
+      <nav class="navbar navbar-default sticky-top">
       <div class="container-fluid">
 
         <div class="navbar-header">
@@ -66,6 +66,7 @@
      </ul>
      </div>
     </nav>
+    <br/>
 
       
 
@@ -78,6 +79,6 @@
     <%= yield %>
     </div>
 
-
+</div>
   </body>
 </html>

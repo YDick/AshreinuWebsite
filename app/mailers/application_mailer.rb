@@ -1,4 +1,11 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'from@example.com'
-  layout 'mailer'
+
+
+  def headers
+    {
+      :subject => "Contact Form Inquiry",
+      :to => "deepdarkdeath@gmail.com",
+      :from => %("#{name}" <#{email}>)
+    }
+  end
 end

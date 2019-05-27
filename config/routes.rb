@@ -14,4 +14,8 @@ Rails.application.routes.draw do
   get "/about" => "fundraisers#about", as: 'about'
   get "/map" => "map#view", as: "map"
 
+
+  get '/contact' => "messages#new", as: "contact"
+  post '/contact' => "messages#create", as: "messages"
+
 end

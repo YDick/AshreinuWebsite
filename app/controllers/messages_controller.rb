@@ -12,7 +12,8 @@ class MessagesController < ApplicationController
               MailerMailer.with(message: params[:message]).contact.deliver  
               format.html {redirect_to(root_path) }
             else
-              format.html { render action: 'new', notice: "please make sure all feilds are filled in" }
+                flash.now.alert = "Please fill in all the required boxes"
+              format.html { render action: 'new'  }
             end
           end
 

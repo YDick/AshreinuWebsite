@@ -9,11 +9,10 @@ class MessagesController < ApplicationController
 
         respond_to do |format|
             if @message.valid?
-              # Tell the UserMailer to send a welcome email after save
-              MailerMailer.contact.deliver  
+              MailerMailer.with(message: params[:message]).contact.deliver  
               format.html {redirect_to(root_path) }
             else
-              format.html { render action: 'new' }
+              format.html { render action: 'new', notice: "please make sure all feilds are filled in" }
             end
           end
 
@@ -40,7 +39,7 @@ class MessagesController < ApplicationController
 
     end
 
-    private
+    private 
 
     def message_params
         params.require(:message).permit(:name, :email, :phone_number, :body)

@@ -2,8 +2,10 @@ class MailerMailer < ApplicationMailer
     default from: 'justatestomg@gmail.com'
 
     def contact
-      @body = 'hey'
-      mail(to: "joodeek@gmail.com", subject: 'Contact Us Reply')
+      @body = params[:message][:body]
+      @email = params[:message][:email]
+      @phone = params[:message][:phone]
+      mail(to: "joodeek@gmail.com", subject: 'Someone has contacted us!')
     end
 
     

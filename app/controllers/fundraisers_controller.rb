@@ -1,6 +1,6 @@
 class FundraisersController < ApplicationController
 
-  before_action :require_login, except: [:index, :new, :create, :show]
+  # before_action :require_login, except: [:index, :new, :create, :show]
   before_action :require_ownership, only: [:edit, :update, :destroy]
 
     def index

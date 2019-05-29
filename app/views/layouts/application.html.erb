@@ -11,7 +11,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-    <%= favicon_link_tag asset_path('ashreinu_logo_black.png') %>
+    <%= favicon_link_tag asset_path('ashreinu_logo.jpg') %>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -43,7 +43,9 @@
       <div class="container-fluid">
 
         <div class="navbar-header">
-          <a class="navbar-brand" href="<%=root_path%>"><img src="http://www.campashreinu.ca/wp-content/uploads/2014/01/logo.png" height ='50' alt="Ashreinu Logo"></a>
+          <a class="navbar-brand" href="<%=root_path%>"><img src="http://www.campashreinu.ca/wp-content/uploads/2014/01/logo.png" alt="Ashreinu Logo"></a>
+
+          <%if false%><%= image_tag("ashreinu_logo.jpg")%><%end%>
         </div>
         <ul class="nav navbar-nav">
           <li>
@@ -79,6 +81,14 @@
     <%= yield %>
     </div>
 
+</div>
+<br/>
+<div class = "footer">
+
+<p><b>CampAshreinu123@gmail.com | (647)-123-4567 </b></p>
+
+<p>Sign up for our newsletter!</p>
+<p class = "signiture"> Site Created by Yehudis Dick    </p>
 </div>
   </body>
 </html>

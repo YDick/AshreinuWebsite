@@ -13,7 +13,7 @@
 
     <p> Email:</br> <%= f.email_field :email %> </p>
 
-    <p> Fundraising Goal:</br> $<%= f.number_field :goal, value: "3600", min: '10', step: '10' %> </p>
+    <p> Fundraising Goal:</br> $<%= f.number_field :goal, value: "3600", min: '10', step: '10' %>  </p>
 
     <% unless @fundraiser.new_record? %>
         <p> Old Password:</br> <%= f.password_field :old_password %> </p>   

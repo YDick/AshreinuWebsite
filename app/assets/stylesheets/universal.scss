@@ -7,6 +7,12 @@
     src:url(asset-path('fonts/Quicksand-Regular.otf'));
  }
 
+ @font-face {
+    font-family: 'roboto';
+    src:url(asset-path('fonts/Roboto-Regular.ttf'));
+ }
+
+
   
   body {
     font-family: 'quicksand';

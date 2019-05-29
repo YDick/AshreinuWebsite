@@ -7,3 +7,17 @@
     width: 90%;
     height: 90%;
   }
+
+.grid_container {
+  display: inline-grid;
+  grid-gap: 10px;
+  grid-template-columns: auto auto auto auto;
+}
+
+.daycamp_wrapper  {
+  grid-column: 1 / 2;
+}
+
+.overnight_wrapper  {
+  grid-column: 3 / 4;
+}

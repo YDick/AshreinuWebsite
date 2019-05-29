@@ -1,24 +1,24 @@
+<div class ="grid_container">
+    <div class = "daycamp_wrapper" >
+    <h2>Day Camp</h2>
+    <p>
+    Ashreinu Day Camp is located in Bais Yaakov High School's spacious building, located at 410 Lawrence Ave. W.
+    </p>
 
-<div class = "daycamp_wrapper" >
-<h2>Day Camp</h2>
-<p>
-Ashreinu Day Camp is located in Bais Yaakov High School's spacious building, located at 410 Lawrence Ave. W.
-</p>
+    <p>
+    <%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=15&size=400x300&markers=size:small%7Ccolor:red%7C#{@bjhs.latitude},#{@bjhs.longitude}&key=#{@maps_api_key}", alt: "Map" %>
+    </p>
+    </div>
 
-<p>
-<%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=15&size=400x300&markers=size:small%7Ccolor:red%7C#{@bjhs.latitude},#{@bjhs.longitude}&key=#{@maps_api_key}", alt: "Map" %>
-</p>
-</div>
+    <div class = "overnight_wrapper">
+    <h2>Overnight Camp</h2>
+    <p>
+    Featuring picturesque camp grounds, and beautiful accommodations, Ashreinu's overnight camp is located at 996 Chetwynd Rd, Burk's Falls
+    </p>
 
-<vr />
-<div class = "overnight_wrapper">
-<h2>Overnight Camp</h2>
-<p>
-Featuring picturesque camp grounds, and beautiful accommodations, Ashreinu's overnight camp is located at 996 Chetwynd Rd, Burk's Falls
-</p>
-
-<p>
-<%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=10&size=400x300&markers=size:small%7Ccolor:red%7C#{@overnight.latitude},#{@overnight.longitude}&key=#{@maps_api_key}", alt: "Map" %>
-</p>
+    <p>
+    <%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=10&size=400x300&markers=size:small%7Ccolor:red%7C#{@overnight.latitude},#{@overnight.longitude}&key=#{@maps_api_key}", alt: "Map" %>
+    </p>
+    </div>
 </div>
 

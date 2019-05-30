@@ -3,9 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-*  {
-  font-weight: normal;
-}
 .map {
     height: 400px;
     width: 90%;
@@ -16,12 +13,18 @@
   display: inline-grid;
   grid-gap: 10px;
   grid-template-columns: auto auto auto auto;
+  // border: solid 3px white;
+
 }
 
 .daycamp_wrapper  {
   grid-column: 1 / 2;
+  padding: 30px;
+  background-color: #fafafa; 
 }
 
 .overnight_wrapper  {
   grid-column: 3 / 4;
+  padding: 30px;
+  background-color: #fafafa; 
 }

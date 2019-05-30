@@ -17,11 +17,14 @@
     src:url(asset-path('fonts/ZCOOLKuaiLe-Regular.ttf'));
  }
 
-
+ @font-face {
+   font-family: 'cabin';
+   src:url(asset-path('fonts/Cabin-Regular.ttf'));
+}
   
 * {
     font-family: "roboto";
-   //  color: black;
+    color: black;
    //  font-weight: bold;
   }
   
@@ -38,7 +41,7 @@
    top: 0;
    display: table;
    background-size: cover;
-   opacity: 0.75;
+   opacity: 0.45;
    position: absolute;
    z-index: -1;  
  }

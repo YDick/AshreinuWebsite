@@ -12,9 +12,14 @@
     src:url(asset-path('fonts/Roboto-Regular.ttf'));
  }
 
+ @font-face {
+    font-family: 'campy';
+    src:url(asset-path('fonts/ZCOOLKuaiLe-Regular.ttf'));
+ }
+
 
   
-  body {
-    font-family: 'quicksand';
+* {
+    font-family: "roboto";
   }
   

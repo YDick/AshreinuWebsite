@@ -30,7 +30,7 @@
   
 
 .backround1  {
-   display: block;
+   // display: block;
 }
 .background1::after  {
    width: 100%;
@@ -38,10 +38,11 @@
    margin: auto;
    content: "";
    background: image-url('lake.jpeg') no-repeat 50% 50%;
+   background-size: cover;
+   background-attachment: fixed;
    top: 0;
    display: table;
-   background-size: cover;
    opacity: 0.45;
-   position: absolute;
+   position: absolute;  
    z-index: -1;  
  }

@@ -24,7 +24,8 @@
 </head>
 
   <body>
-<% if controller_name == "map" || controller_name == "messages"%>
+<% # controller_name == "map" || controller_name == "messages" || controller_name == "sessions"%>
+<% unless view_paths == "about.html.erb"%>
   <div class = "background1" >
 <% end %>
   <div class = "margin" >

@@ -42,3 +42,46 @@
    position: absolute;  
    z-index: -1;  
  }
+
+ .margin {
+   margin-left: 60px;
+   margin-right: 60px;
+   margin-top: 3px;
+}
+
+.login {
+ text-align: right;
+ margin-right: 11px;
+ 
+}
+
+
+
+.navbar-brand img {
+ margin-top: -15px;
+ height: 50px;
+}
+
+.navbar-nav {
+//  align-self: right;
+}
+
+
+
+
+
+.footer  {
+/* position: relative; */
+display: none;
+left: 0;
+bottom: 0;
+width: 100%;
+ background-color: lightslategray;
+ text-align: center;
+ color: white;
+}
+
+.signiture  {
+ text-align: right;
+ font-size: 12px;
+ }

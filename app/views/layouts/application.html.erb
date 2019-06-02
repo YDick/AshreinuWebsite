@@ -25,10 +25,10 @@
 
   <body>
 <% # controller_name == "map" || controller_name == "messages" || controller_name == "sessions"%>
-<% unless view_paths == "about.html.erb"%>
+<% unless controller_name == "home" %>
   <div class = "background1" >
 <% end %>
-  <div class = "margin" >
+
 
 
       <nav class="navbar navbar-expand-lg">
@@ -67,7 +67,7 @@
       
 
 
-
+<div class = "margin" >
     <div class = "content">
     <%= yield %>
     </div>

@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   post "/login" => "sessions#create"
   get "/logout" => "sessions#destroy"
 
-  get "/about" => "fundraisers#about", as: 'about'
+  get "/about" => "home#about", as: 'about'
   get "/map" => "map#view", as: "map"
 
 

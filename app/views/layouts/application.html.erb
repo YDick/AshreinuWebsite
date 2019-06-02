@@ -28,6 +28,9 @@
 <% unless controller_name == "home" %>
   <div class = "background1" >
 <% end %>
+<% if controller_name == "home" %>
+  <div class = "background2" >
+<% end %>
 
 
 
@@ -47,7 +50,7 @@
         <div class="collapse navbar-collapse" id="navCollapse">
           <ul class="nav navbar-nav">
             <li>
-              <a href=<%= about_path %>>About</a>
+              <a href=<%=about_path %>>About</a>
             </li>
 
             <li>

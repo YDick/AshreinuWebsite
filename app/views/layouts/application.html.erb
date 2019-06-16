@@ -26,46 +26,35 @@
   <body>
   <div class = "background1" >
 
-    <% if controller_name == "home" %>
-    <%= render partial: "slideshow"%>
-    <% end %>
-
-      <nav class="navbar navbar-expand-lg">
-      <div class="container">
+      <nav class="navbar navbar-default sticky-top">
+      <div class="container-fluid">
 
         <div class="navbar-header">
-          <a class="navbar-brand" href="<%=root_path%>"><%= image_tag("ashreinu_logo.jpg")%></a>
+          <a class="navbar-brand" href="<%=root_path%>"><img src="http://www.campashreinu.ca/wp-content/uploads/2014/01/logo.png" alt="Ashreinu Logo"></a>
+
+          <%if false%><%= image_tag("ashreinu_logo.jpg")%><%end%>
         </div>
-
-        <!-- Collapse button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navCollapse">
-          <span class="navbar-toggler-icon"></span>
-         </button>
-
-         <!-- Collapsible content -->
-        <div class="collapse navbar-collapse" id="navCollapse">
-          <ul class="nav navbar-nav">
-            <li>
-              <a href=<%=about_path %>>About</a>
-            </li>
-
-            <li>
-            <a href=<%= map_path %>>Where We Are</a>
-          </li>
+        <ul class="nav navbar-nav">
           <li>
-            <a href="">News</a>
+            <a href=<%= about_path %>>About</a>
           </li>
+  
           <li>
-          <a href="<%= contact_path %>">Contact Us</a>
+          <a href=<%= map_path %>>Where We Are</a>
         </li>
+        <li>
+          <a href="">News</a>
+        </li>
+        <li>
+        <a href="<%= contact_path %>">Contact Us</a>
+      </li>
      </ul>
-
+     </div>
     </nav>
-    <br/>
-    
 
-      
-
+<% if controller_name == "home" %>
+    <%= render partial: "slideshow"%>
+<% end %> 
 
 <div class = "margin" >
     <div class = "content">

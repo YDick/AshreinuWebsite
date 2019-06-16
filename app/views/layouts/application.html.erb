@@ -54,6 +54,7 @@
 
 <% if controller_name == "home" %>
     <%= render partial: "slideshow"%>
+    </div>
 <% end %> 
 
 <div class = "margin" >
@@ -72,6 +73,10 @@
 </div>
 
 </div>
-</div>
+
+<% unless controller_name = "home" %>
+  </div>
+<% end %>
+
   </body>
 </html>

@@ -24,10 +24,11 @@
 </head>
 
   <body>
-  <div class = "not-footer" >
-<% unless controller_name == "home" %>
   <div class = "background1" >
-<% end %>
+
+    <% if controller_name == "home" %>
+    <%= render partial: "slideshow"%>
+    <% end %>
 
       <nav class="navbar navbar-expand-lg">
       <div class="container">
@@ -62,9 +63,7 @@
     </nav>
     <br/>
     
-    <% if controller_name == "none" %>
-    <%= render partial: "slideshow"%>
-    <% end %>
+
       
 
 
@@ -72,12 +71,9 @@
     <div class = "content">
     <%= yield %>
     </div>
-
 </div>
 
-<!-- not footer -->
 
-</div>
 <div class = "footer">
 
 <p><b>CampAshreinu123@gmail.com | (647)-123-4567 </b></p>

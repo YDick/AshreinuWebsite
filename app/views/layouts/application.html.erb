@@ -26,19 +26,36 @@
   <body>
   <div class = "background1" >
 
-      <nav class="navbar navbar-default sticky-top">
+      <nav class="navbar navbar-transparent">
       <div class="container-fluid">
 
         <div class="navbar-header">
           <a class="navbar-brand" href="<%=root_path%>"><img src="http://www.campashreinu.ca/wp-content/uploads/2014/01/logo.png" alt="Ashreinu Logo"></a>
 
-          <%if false%><%= image_tag("ashreinu_logo.jpg")%><%end%>
+          <%if false%>
+          <img src="http://www.campashreinu.ca/wp-content/uploads/2014/01/logo.png" alt="Ashreinu Logo">
+          <%= image_tag("ashreinu_logo.jpg")%>
+          <%end%>
         </div>
         <ul class="nav navbar-nav">
           <li>
-            <a href=<%= about_path %>>About</a>
+            <a href=<%= about_path %>>Day Camp</a>
           </li>
-  
+
+          <li>
+            <a href=<%= about_path %>>Overnight</a>
+          </li>
+
+          <li>
+            <a href=<%= about_path %>>Year-round Programs</a>
+          </li>
+
+          <li>
+            <a href=<%= about_path %>>Sunday School</a>
+          </li>
+          <li>
+            <a href=<%= about_path %>>Teens</a>
+          </li>
           <li>
           <a href=<%= map_path %>>Where We Are</a>
         </li>
@@ -48,12 +65,16 @@
       <li>
         <a href="<%= contact_path %>">Contact Us</a>
       </li>
-      <div id = "social">
       <li>
-        <%= link_to image_tag("/social/001-instagram.png"), "https://www.instagram.com/ashreinutoronto/?hl=en" %>
+        <a href="<%= contact_path %>">Apply!</a>
       </li>
-      </div>
-     </ul>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      <li>
+        <%= link_to image_tag("social/001-instagram.png", :size => "20px"), "https://www.instagram.com/ashreinutoronto/?hl=en" %>
+      </li>
+      </ul>
+
      </div>
     </nav>
 

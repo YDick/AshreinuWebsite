@@ -33,12 +33,12 @@
    height: 100%;
    margin: auto;
    content: "";
-   background: image-url('lake.jpeg') no-repeat 50% 50%;
+   background: image-url('real_lake.jpg') no-repeat 50% 50%;
    background-size: cover;
    background-attachment: fixed;
    top: 0;
    display: table;
-   opacity: 0.45;
+   opacity: 0.80;
    position: absolute;  
    z-index: -1;  
  }

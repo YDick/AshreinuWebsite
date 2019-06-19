@@ -24,7 +24,9 @@
 </head>
 
   <body>
-  <div class = "background1" >
+  <% unless controller_name == 'home' %>
+    <div class = "background1" >
+  <% end %>
 
       <nav class="navbar navbar-transparent">
       <div class="container-fluid">

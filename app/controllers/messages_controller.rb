@@ -18,9 +18,6 @@ class MessagesController < ApplicationController
               format.html { render action: 'new'  }
             end
           end
-
-
-
     end
 
     private 

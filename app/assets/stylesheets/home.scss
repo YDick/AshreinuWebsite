@@ -5,6 +5,18 @@
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light|Vast+Shadow&display=swap');
 
+.landing {
+    background: image-url('pier.jpg') no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 80%;
+    width: 100%;
+    background-size: cover;
+    margin: 0;
+}
+
+
+
 .about h1 {
     font-family: "Permanent Marker", cursive;
     font-style: italic; 

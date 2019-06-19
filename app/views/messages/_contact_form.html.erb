@@ -1,0 +1,33 @@
+<%= form_for(@message) do |f| %>
+
+  <div class="form-group">
+    <label for="name">Name</label>
+    <%= f.text_field :name, class:"form-control", placeholder: "Enter Name"%> </p>
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email address</label>
+    <%= f.email_field :email, class:"form-control", placeholder: "Enter Email" %> </p>
+  </div>
+
+  <div class="form-group">
+    <label for="phone_number">Phone Number</label>
+    <%= f.telephone_field :phone_number, class:"form-control", placeholder: "Enter Phone Number" %> </p>
+  </div>
+
+  <div class="form-group">
+    <label for="body">Message</label>
+    <%= f.text_area :body, class:"form-control", placeholder: "Let us know what's on your mind!"  %> </p>
+  </div>
+
+    <%= f.submit "Submit", class: "btn btn-default btn-primary"  %>
+
+<% end %>
+
+
+
+
+
+
+
+

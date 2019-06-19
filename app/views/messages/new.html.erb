@@ -1,21 +1,7 @@
 <div class = "mailer">
 <p>Email us at <b>CampAshreinu123@gmail.com</b> or use the form below to be in touch!</p>
 
+<%= render partial: "contact_form" %>
 
 
-<%= form_for(@message) do |f| %>
-
-
-    <p> Name:</br> <%= f.text_field :name%> </p>
-
-    <p> Email:</br> <%= f.email_field :email %> </p>
-
-    <p> Phone:</br> <%= f.telephone_field :phone_number %> </p>
-
-    <p> Message:</br> <%= f.text_area :body, placeholder: "Let us know what's on your mind!"  %> </p>
-
-
-    <%= f.submit "Submit" %>
-
-<% end %>
 </div>

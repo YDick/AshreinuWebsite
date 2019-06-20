@@ -28,7 +28,7 @@
     <div class = "background1" >
   <% end %>
 
-      <nav class="navbar navbar-transparent">
+      <nav class="navbar navbar-transparent" role = "navigation">
       <div class="container-fluid">
 
         <div class="navbar-header">
@@ -39,6 +39,12 @@
           <%= image_tag("ashreinu_logo.jpg")%>
           <%end%>
         </div>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                
         <ul class="nav navbar-nav">
           <li>
             <a href=<%= about_path %>>Day Camp</a>
@@ -76,7 +82,7 @@
         <%= link_to image_tag("social/001-instagram.png", :size => "20px"), "https://www.instagram.com/ashreinutoronto/?hl=en" %>
       </li>
       </ul>
-
+     </div>
      </div>
     </nav>
 

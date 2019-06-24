@@ -24,7 +24,7 @@
 
   <body>
   <% if controller_name == 'home' %>
-    <div class = "landing" >
+    <%# <div class = "landing" > %>
   <%else%>
     <div class = "background1" >
   <% end %>
@@ -85,7 +85,7 @@
     </div>
     <% end %>
 
-<% if controller_name == "not_home" %>
+<% if controller_name == "home" %>
     <%= render partial: "slideshow"%>
     </div>
 <% end %> 

@@ -45,7 +45,7 @@
 
  
 
- .margin {
+ .content {
    margin-left: 60px;
    margin-right: 60px;
    margin-top: 3px;
@@ -63,6 +63,7 @@
 .navbar {
    position: fixed;
    transition: top 0.3s;
+
 }
 .navbar-brand img {
  margin-top: -15px;
@@ -71,7 +72,7 @@
 
 .navbar a {
    font-family: 'Indie Flower', cursive;
-   font-size: 15px;
+   font-size: 17px;
    font-weight:700;
    color: black;
 }

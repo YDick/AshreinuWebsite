@@ -1,5 +1,8 @@
 {
   "name": "Ashreinu",
   "private": true,
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "rails-erb-loader": "^5.5.2"
+  }
 }

@@ -23,7 +23,9 @@
 </head>
 
   <body>
-  <% unless controller_name == 'home' %>
+  <% if controller_name == 'home' %>
+    <%# <div class = "landing" > %>
+  <%else%>
     <div class = "background1" >
   <% end %>
 
@@ -90,11 +92,10 @@
     </div>
 <% end %> 
 
-<div class = "margin" >
     <div class = "content">
     <%= yield %>
     </div>
-</div>
+
 
 
 <div class = "footer">

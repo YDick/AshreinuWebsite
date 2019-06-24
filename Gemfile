@@ -38,8 +38,8 @@ gem 'devise'
 gem 'mailgun-ruby'
 
 # from mailer tutorial
-gem 'jquery-rails'
-gem 'dotenv-rails', groups: [:development, :test]
+# gem 'jquery-rails'
+# gem 'dotenv-rails', groups: [:development, :test]
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'

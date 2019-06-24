@@ -2,8 +2,6 @@ Rails.application.routes.draw do
   get 'map/view'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'home#about'
-  get  'home/download_dayapp' => "home#download_dayapp"
-  get  'home/download_nightapp' => "home#download_nightapp"
 
   resources :fundraisers
 

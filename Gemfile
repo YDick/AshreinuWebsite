@@ -34,12 +34,10 @@ gem 'country_select', '~> 4.0'
 # to encript maps api
 gem "figaro"
 gem 'devise'
+
 # gem 'omniauth-google-oauth2', '~> 0.2.2'
 gem 'mailgun-ruby'
 
-# from mailer tutorial
-# gem 'jquery-rails'
-# gem 'dotenv-rails', groups: [:development, :test]
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'

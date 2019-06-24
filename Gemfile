@@ -34,7 +34,6 @@ gem 'country_select', '~> 4.0'
 # to encript maps api
 gem "figaro"
 gem 'devise'
-
 # gem 'omniauth-google-oauth2', '~> 0.2.2'
 gem 'mailgun-ruby'
 
@@ -72,6 +71,7 @@ group :test do
 end
 
 group :production do
+  # db for heroku
   gem 'pg', '0.21.0'
 end
 

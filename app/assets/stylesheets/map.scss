@@ -6,7 +6,7 @@
 .map {
     height: 400px;
     width: 90%;
-    height: 90%;
+    height: 90%; 
   }
 
 .grid_container {
@@ -16,14 +16,17 @@
   // border: solid 3px white;
 
 }
-
-.daycamp_wrapper  {
+.map-wrapper {
+  border-radius: 20px;
+  background-color: rgba(229, 229, 229, 0.95);
+}
+#day-map {
   grid-column: 1 / 2;
   padding: 30px;
   background-color: #fafafa; 
 }
 
-.overnight_wrapper  {
+#night-map  {
   grid-column: 3 / 4;
   padding: 30px;
   background-color: #fafafa; 

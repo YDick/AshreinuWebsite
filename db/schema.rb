@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_25_201224) do
+ActiveRecord::Schema.define(version: 2019_06_25_220029) do
 
   create_table "applications", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -23,6 +23,41 @@ ActiveRecord::Schema.define(version: 2019_06_25_201224) do
     t.float "age"
     t.string "grade"
     t.string "school"
+    t.string "address"
+    t.string "city"
+    t.string "prov"
+    t.string "ZIP"
+    t.string "home_phone"
+    t.string "camper_cell"
+    t.string "camper_email"
+    t.string "emg_contact"
+    t.string "emg_contact_phone"
+    t.string "health_card"
+    t.string "med_info"
+    t.string "other_info"
+    t.string "ref1"
+    t.string "ref1_school_phone"
+    t.string "ref1_phone"
+    t.string "ref2"
+    t.string "ref2_school_phone"
+    t.string "ref2_phone"
+    t.string "father"
+    t.string "d_marital_status"
+    t.string "d_occupation"
+    t.string "d_h_phone"
+    t.string "d_cell"
+    t.string "d_b_phone"
+    t.string "d_email"
+    t.string "mother"
+    t.string "m_marital_status"
+    t.string "m_occupation"
+    t.string "m_h_phone"
+    t.string "m_cell"
+    t.string "m_b_phone"
+    t.string "m_email"
+    t.string "synagogue"
+    t.string "rabbi"
+    t.string "session"
   end
 
   create_table "fundraisers", force: :cascade do |t|

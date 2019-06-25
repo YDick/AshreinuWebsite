@@ -1,9 +1,9 @@
-<%= form_for(@apply, url: apply_path) do |f| %>
+<%= form_for(@apply, url: apply_path, :html => {:class => "form-inline"}) do |f| %>
 
 <h3>General Information</h3>
 <div class="form-group">
   <label for="name">Child's Last Name</label>
-  <%= f.text_field :lastname, class:"form-control", placeholder: "Enter Name"%> </p>
+  <%= f.text_field :lastname,  class:"form-control", placeholder: "Enter Name"%> </p>
 </div>
 <div class="form-group">
   <label for="name">First Name</label>
@@ -39,6 +39,7 @@
   <label for="school">School</label>
   <%= f.text_field :school, class:"form-control"  %> </p>
 </div>
+
 
 
 <%= f.submit "Submit", class: "btn btn-default btn-primary"  %>

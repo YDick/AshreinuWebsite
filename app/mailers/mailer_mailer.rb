@@ -6,7 +6,7 @@ class MailerMailer < ApplicationMailer
       @body = params[:message][:body]
       @email = params[:message][:email]
       @phone = params[:message][:phone_number]
-      mail(to: "joodeek@gmail.com", subject: 'Someone has contacted us!')
+      mail(to: "joodeek@gmail.com", subject: '#{@name} has contacted us!')
     end
 
     def auto_reply

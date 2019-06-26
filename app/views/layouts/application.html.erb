@@ -26,12 +26,9 @@
 </head>
 
 <body>
-  <% if controller_name == 'home' %>
-  <%# <div class = "landing" > %>
-  <%else%>
-  <div class="background1">
-    <% end %>
-  
+
+<div class="background1">
+
     <nav class="navbar navbar-transparent" role="navigation">
       <div class="container-fluid">
 
@@ -85,9 +82,6 @@
       </div>
     </nav>
 
-  <% if controller_name == 'home' %>
-  </div>
-  <% end %>
 
   <% if controller_name == "home" %>
   <%= render partial: "slideshow"%>
@@ -98,21 +92,66 @@
     <%= yield %>
   </div>
 
+</div>
 
 
-  <div class="footer">
+<!-- Site footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6><%=link_to 'Contact', contact_path %></h6>
+            <ul class="footer-links">
+              <li>CampAshreinu123@gmail.com</li>
+              <li>416.787.1489</li>
+            </ul>
+          </div>
 
-    <p><b>CampAshreinu123@gmail.com | (647)-123-4567 </b></p>
+          <div class="col-xs-6 col-md-3">
+            <%# <h6>Categories</h6>
+            <ul class="footer-links">
+              <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
+              <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
+              <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
+              <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
+              <li><a href="http://scanfcode.com/category/android/">Android</a></li>
+              <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
+            </ul> %>
+          </div>
 
-    <p>Sign up for our newsletter!</p>
-    <p class="signiture"> Site Created by Yehudis Dick </p>
-  </div>
+          <div class="col-xs-6 col-md-3">
+            <%# <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="http://scanfcode.com/about/">About Us</a></li>
+              <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+              <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
+              <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+              <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+            </ul> %>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Designed by Yehudis Dick
+            </p>
+          </div>
 
-  </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <%# <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li> %>
+              <%# <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li> %>
+              <li><a class="dribbble" href="https://www.instagram.com/ashreinutoronto/?hl=en" target="_blank"><i class="fa fa-instagram"></i></a></li>
+              <%# <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>    %>
+            </ul>
+          </div>
+        </div>
+      </div>
+</footer>
 
-  <% unless controller_name == "home" %>
-  </div>
-  <% end %>
+
 
 </body>
 

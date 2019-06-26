@@ -6,6 +6,7 @@
   height: 450px;
   // border: 1px solid #f1f1f1;
 
+  margin: 3px;
 
   // perspective: 1000px;
   /* Remove this if you don't want the 3D effect */
@@ -19,6 +20,7 @@
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
+
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
@@ -49,13 +51,26 @@
   // idk what this does
   backface-visibility: hidden;
 
+  // pic
+  background-size: 100vh;
+	background-size: cover;
+
+
   // paralax float
   // z-index: 2;
 }
 
-#night-card-front::after {
-  background-image: image-url('real_lake.jpg') no-repeat 50% 50%;
+#night-card-front {
+  background-image: url(asset-path('day/orca.jpg'));
 }
+#day-card-front {
+  background-image: url(asset-path('day/cheering.jpg'));
+} 
+
+#shab-card-front {
+  background-image: url(asset-path('real_lake.jpg'));
+}
+
 
 /* Style the back side */
 .flip-card-back {
@@ -80,6 +95,8 @@
   flex-wrap: wrap;
   // justify-content: center;
 
+  border-radius: 20%;
+
   // for paralax float
   -webkit-perspective: 1000px;
   perspective: 1000px;
@@ -88,8 +105,4 @@
   position: relative;
 	-webkit-transition: 1.5s ease-in-out;
 	transition: 1.5s ease-in-out;
-}
-
-.flip-card {
-  margin: 3px;
 }

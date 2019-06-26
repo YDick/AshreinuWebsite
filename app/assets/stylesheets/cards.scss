@@ -35,6 +35,8 @@
   height: 100%;
   backface-visibility: hidden;
 
+  border-radius: 7px;
+
   // paralax floating
   // transform: translatez(70px) scale(0.8);
   // backface-visibility: hidden;
@@ -53,7 +55,14 @@
 
   // pic
   background-size: 100vh;
-	background-size: cover;
+  background-size: cover;
+  
+    // flex way to center vertically 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
 
 
   // paralax float
@@ -74,8 +83,8 @@
 
 /* Style the back side */
 .flip-card-back {
-  background-color: dodgerblue;
-  color: white;
+  background-color: #eee3e7;
+  // color: white !important;
   transform: rotateY(180deg);
   backface-visibility: hidden;
 
@@ -83,6 +92,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  padding: 30px;
 
   // paralax floating
   // z-index: 0;
@@ -105,4 +116,9 @@
   position: relative;
 	-webkit-transition: 1.5s ease-in-out;
 	transition: 1.5s ease-in-out;
+}
+
+.flip-card h3 {
+  font-size: 40px;
+  color: whitesmoke;
 }

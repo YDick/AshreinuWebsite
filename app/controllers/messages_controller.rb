@@ -48,6 +48,6 @@ class MessagesController < ApplicationController
     end
 
     def application_params
-      params.require(:application)
+      params[:application]
     end
 end

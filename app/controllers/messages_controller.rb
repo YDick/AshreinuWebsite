@@ -29,10 +29,10 @@ class MessagesController < ApplicationController
       @apply = Application.new(application_params)
 
       respond_to do |format|
-          if @message.valid?
-            MailerMailer.with(message: params[:message]).contact.deliver
+          if @apply.valid?
+            MailerMailer.with(message: params[:application]).contact.deliver
             format.html {redirect_to(root_path) }
-            MailerMailer.with(message: params[:message]).auto_reply.deliver    
+            MailerMailer.with(message: params[:application]).auto_reply.deliver    
             format.html 
           else
             flash.now.alert = "Please fill in all the required boxes"

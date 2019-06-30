@@ -17,5 +17,10 @@ class MailerMailer < ApplicationMailer
       mail(to: @email, subject: "We Have Received Your Message!")
     end
 
+    def application
+      @params = params[:application]
+      mail(to: "joodeek@gmail.com", subject: '#{@params[:lastname]} Application Form!')
+    end
+
     
 end

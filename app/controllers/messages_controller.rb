@@ -28,17 +28,17 @@ class MessagesController < ApplicationController
     def postapply
       # @apply = Application.new(application_params)
 
-      # respond_to do |format|
+      respond_to do |format|
           # if @apply.valid?
-          #   MailerMailer.with(message: params[:application]).contact.deliver
-          #   format.html {redirect_to(root_path) }
+            MailerMailer.with(application: params[:application]).application.deliver
+            format.json {redirect_to(root_path) }
           #   MailerMailer.with(message: params[:application]).auto_reply.deliver    
           #   format.html 
           # else
             # flash.now.alert = "Please fill in all the required boxes"
             # format.html { render action: 'new'  }
           # end
-        # end
+        end
 
     end
 

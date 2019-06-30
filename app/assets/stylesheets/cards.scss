@@ -1,0 +1,124 @@
+/* The flip card container - set the width and height to whatever you want. We have added the border property to
+ demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 500px;
+  height: 450px;
+  // border: 1px solid #f1f1f1;
+
+  margin: 3px;
+
+  // perspective: 1000px;
+  /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+
+  border-radius: 7px;
+
+  // paralax floating
+  // transform: translatez(70px) scale(0.8);
+  // backface-visibility: hidden;
+
+  // to center vertically
+  // top: 50%;
+  // transform: translateY(-50%);
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+  // idk what this does
+  backface-visibility: hidden;
+
+  // pic
+  background-size: 100vh;
+  background-size: cover;
+  
+    // flex way to center vertically 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+
+
+  // paralax float
+  // z-index: 2;
+}
+
+#night-card-front {
+  background-image: url(asset-path('day/orca.jpg'));
+}
+#day-card-front {
+  background-image: url(asset-path('day/cheering.jpg'));
+} 
+
+#shab-card-front {
+  background-image: url(asset-path('real_lake.jpg'));
+}
+
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #eee3e7;
+  // color: white !important;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+
+  // flex way to center vertically 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 30px;
+
+  // paralax floating
+  // z-index: 0;
+}
+
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  // justify-content: center;
+
+  border-radius: 20%;
+
+  // for paralax float
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  position: relative;
+	-webkit-transition: 1.5s ease-in-out;
+	transition: 1.5s ease-in-out;
+}
+
+.flip-card-front h3 {
+  font-size: 40px;
+  color: whitesmoke;
+}

@@ -1,46 +1,47 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Ashreinu</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="7h7kUbUt0nOegrVDUtO5mllqbOwWBHYPmfEG3MP8Rv4" />
+<head>
+  <title>Ashreinu</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="7h7kUbUt0nOegrVDUtO5mllqbOwWBHYPmfEG3MP8Rv4" />
 
-    <%= favicon_link_tag asset_path('ashreinu_logo.jpg') %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <%= favicon_link_tag asset_path('ashreinu_logo.jpg') %>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
 </head>
 
-  <body>
-  <% if controller_name == 'home' %>
-    <%# <div class = "landing" > %>
-  <%else%>
-    <div class = "background1" >
-  <% end %>
+<body>
 
-    <nav class="navbar navbar-transparent" role = "navigation">
+<div class="background1">
+
+    <nav class="navbar navbar-transparent" role="navigation">
       <div class="container-fluid">
 
         <div class="navbar-header">
-          <a class="navbar-brand" href="<%=root_path%>"><img src="http://www.campashreinu.ca/wp-content/uploads/2014/01/logo.png" alt="Ashreinu Logo"></a>
+          <a class="navbar-brand" href="<%=root_path%>"><img
+              src="http://www.campashreinu.ca/wp-content/uploads/2014/01/logo.png" alt="Ashreinu Logo"></a>
 
           <%if false%>
           <img src="http://www.campashreinu.ca/wp-content/uploads/2014/01/logo.png" alt="Ashreinu Logo">
           <%= image_tag("ashreinu_logo.jpg")%>
           <%end%>
         </div>
-                
+
         <ul class="nav navbar-nav">
           <li>
             <a href=<%= about_path %>>Day Camp</a>
@@ -61,54 +62,98 @@
             <a href=<%= about_path %>>Teens</a>
           </li>
           <li>
-          <a href=<%= map_path %>>Where We Are</a>
-        </li>
-        <li>
-          <a href="">News</a>
-        </li>
-      <li>
-        <a href="<%= contact_path %>">Contact Us</a>
-      </li>
-      <li>
-        <a href="<%= apply_path %>">Apply!</a>
-      </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-      <li>
-        <%= link_to image_tag("social/001-instagram.png", :size => "20px"), "https://www.instagram.com/ashreinutoronto/?hl=en" %>
-      </li>
-      </ul>
-     </div>
+            <a href=<%= map_path %>>Where We Are</a>
+          </li>
+          <li>
+            <a href="">Gallery</a>
+          </li>
+          <li>
+            <a href="<%= contact_path %>">Contact Us</a>
+          </li>
+          <li>
+            <a href="<%= apply_path %>">Apply!</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <%= link_to image_tag("social/001-instagram.png", :size => "20px"), "https://www.instagram.com/ashreinutoronto/?hl=en", target: "_blank"%>
+          </li>
+        </ul>
+      </div>
     </nav>
 
-<% if controller_name == 'home' %>
-    </div>
-    <% end %>
 
-<% if controller_name == "home" %>
-    <%= render partial: "slideshow"%>
-    </div>
-<% end %> 
-
-    <div class = "content">
-    <%= yield %>
-    </div>
-
-
-
-<div class = "footer">
-
-<p><b>CampAshreinu123@gmail.com | (647)-123-4567 </b></p>
-
-<p>Sign up for our newsletter!</p>
-<p class = "signiture"> Site Created by Yehudis Dick    </p>
-</div>
-
-</div>
-
-<% unless controller_name == "home" %>
+  <% if controller_name == "home" %>
+  <%render partial: "slideshow"%>
   </div>
-<% end %>
+  <% end %>
 
-  </body>
+  <div class="content">
+    <%= yield %>
+  </div>
+
+</div>
+
+
+<!-- Site footer -->
+
+
+
+
+</body>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6><%=link_to 'Contact', contact_path %></h6>
+            <ul class="footer-links">
+              <li>CampAshreinu123@gmail.com</li>
+              <li>416.787.1489</li>
+            </ul>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <%# <h6>Categories</h6>
+            <ul class="footer-links">
+              <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
+              <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
+              <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
+              <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
+              <li><a href="http://scanfcode.com/category/android/">Android</a></li>
+              <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
+            </ul> %>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <%# <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="http://scanfcode.com/about/">About Us</a></li>
+              <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+              <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
+              <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+              <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+            </ul> %>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Designed by Yehudis Dick
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <%# <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li> %>
+              <%# <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li> %>
+              <li><a class="dribbble" href="https://www.instagram.com/ashreinutoronto/?hl=en" target="_blank"><i class="fa fa-instagram"></i></a></li>
+              <%# <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>    %>
+            </ul>
+          </div>
+        </div>
+      </div>
+</footer>
+
 </html>

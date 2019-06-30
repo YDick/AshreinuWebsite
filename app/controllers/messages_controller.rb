@@ -26,19 +26,19 @@ class MessagesController < ApplicationController
     end
 
     def postapply
-      @apply = Application.new(application_params)
+      # @apply = Application.new(application_params)
 
-      respond_to do |format|
-          if @apply.valid?
-            MailerMailer.with(message: params[:application]).contact.deliver
-            format.html {redirect_to(root_path) }
-            MailerMailer.with(message: params[:application]).auto_reply.deliver    
-            format.html 
-          else
-            flash.now.alert = "Please fill in all the required boxes"
-            format.html { render action: 'new'  }
-          end
-        end
+      # respond_to do |format|
+          # if @apply.valid?
+          #   MailerMailer.with(message: params[:application]).contact.deliver
+          #   format.html {redirect_to(root_path) }
+          #   MailerMailer.with(message: params[:application]).auto_reply.deliver    
+          #   format.html 
+          # else
+            # flash.now.alert = "Please fill in all the required boxes"
+            # format.html { render action: 'new'  }
+          # end
+        # end
 
     end
 

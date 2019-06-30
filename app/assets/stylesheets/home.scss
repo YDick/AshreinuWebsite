@@ -5,13 +5,18 @@
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light|Vast+Shadow&display=swap');
 
+// body, html {
+//     height: 100%;
+//   }
+
 .landing {
     background: image-url('lake_boats.jpg') no-repeat;
     background-position: center;
     background-attachment: fixed;
+    background-size: cover;
     height: 80%;
     width: 100%;
-    background-size: cover;
+ 
     margin: 0;
     // opacity: 0.90;
 }

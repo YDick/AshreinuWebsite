@@ -1,4 +1,4 @@
-<%= form_for(@apply, url: apply_path) do |f| %>
+<%= form_for(@apply, url: apply_path, :html => {:class => "form-inline"}) do |f| %>
 
 <h3>General Information</h3>
 <div class="form-group">
@@ -14,7 +14,7 @@
   <label for="hebname">Hebrew Name</label>
   <%= f.text_field :hebname, class:"form-control"%> </p>
 </div>
-
+<br />
 <div class="form-group">
   <label for="DOB">Date of Birth</label>
   <%= f.date_select :DOB, class:"form-control" %> </p>
@@ -30,16 +30,19 @@
   <%= f.number_field :age, class:"form-control" %> </p>
 </div>
 
-<div class="form-group">
-  <label for="grade">Grade Completed</label>
-  <%= f.text_field :grade, class:"form-control"  %> </p>
-</div>
+<br />
 
 <div class="form-group">
   <label for="school">School</label>
   <%= f.text_field :school, class:"form-control"  %> </p>
 </div>
 
+<div class="form-group">
+  <label for="grade">Grade Completed</label>
+  <%= f.text_field :grade, class:"form-control"  %> </p>
+</div>
+
+<br>
 
 <div class="form-group">
   <%= f.label :address%>
@@ -57,6 +60,9 @@
   <%= f.label :ZIP %>
   <%= f.text_field :ZIP, class:"form-control"  %> </p>
 </div>
+
+<br>
+
 <div class="form-group">
   <label for="home_phone">Home Phone</label>
   <%= f.text_field :home_phone, class:"form-control"  %> </p>
@@ -70,6 +76,7 @@
   <label for="camper_email">Camper Email</label>
   <%= f.text_field :camper_email, class:"form-control"  %> </p>
 </div>
+<br>
 
 <div class="form-group">
   <label for="emg_contact">Emergency Contact</label>
@@ -88,7 +95,7 @@
   <%= f.text_field :health_card, class:"form-control"  %> </p>
 </div>
 
-  Is there any special information which is important to know?
+  <p>Is there any special information which is important to know?</p>
 <div class="form-group">
   <label for="med_info">Medical:</label>
   <%= f.text_field :med_info, class:"form-control"  %> </p>
@@ -101,6 +108,8 @@
 
 <h3>References</h3>
 <h5>(Principal, Teacher)</h5>
+<div class = "grid-container">
+<div id = "ref1">
 <div class="form-group">
   <label for="ref1">Reference 1</label>
   <%= f.text_field :ref1, class:"form-control"  %> </p>
@@ -113,9 +122,11 @@
   <label for="ref1_phone">Home Phone</label>
   <%= f.text_field :ref1_phone, class:"form-control"  %> </p>
 </div>
+</div>
 
+<div id="ref2">
 <div class="form-group">
-  <label for="ref2">Reference 1</label>
+  <label for="ref2">Reference 2</label>
   <%= f.text_field :ref2, class:"form-control"  %> </p>
 </div>
 <div class="form-group">
@@ -126,9 +137,12 @@
   <label for="ref2_phone">Home Phone</label>
   <%= f.text_field :ref2_phone, class:"form-control"  %> </p>
 </div>
+</div>
+</div>
 
 <h3>Family Information </h3><h5>(If single parent, please include applicable information and addresses) </h5>
-
+<div class = "grid-container">
+<div id = "father">
 <div class="form-group">
   <%= f.label :father%>
   <%= f.text_field :father, class:"form-control"  %> </p>
@@ -160,8 +174,8 @@
   <label for="d_email">Email</label>
   <%= f.text_field :d_email, class:"form-control"  %> </p>
 </div>
-
-
+</div>
+<div id="mother">
 <div class="form-group">
   <%= f.label :mother%>
   <%= f.text_field :mother, class:"form-control"  %> </p>
@@ -192,6 +206,8 @@
 <div class="form-group">
   <label for="m_email">Email</label>
   <%= f.text_field :m_email, class:"form-control"  %> </p>
+</div>
+</div>
 </div>
 
 <h3>Jewish Affiliation</h3>

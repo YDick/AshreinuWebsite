@@ -1,0 +1,18 @@
+.form-group {
+    padding: 2px 4px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+#mother {
+    grid-column: 2;
+    padding: 10px;
+}
+
+#father {
+    grid-column: 1;
+    padding: 10px;
+}

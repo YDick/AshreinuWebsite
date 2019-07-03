@@ -26,18 +26,18 @@ class MessagesController < ApplicationController
     end
 
     def postapply
-      # @apply = Application.new(application_params)
+      @apply = Application.new(application_params)
 
       respond_to do |format|
-          # if @apply.valid?
+          if @apply.valid?
             MailerMailer.with(application: params[:application]).application.deliver
-            format.json {redirect_to(root_path) }
+            format.html {redirect_to(root_path) }
           #   MailerMailer.with(message: params[:application]).auto_reply.deliver    
           #   format.html 
-          # else
-            # flash.now.alert = "Please fill in all the required boxes"
-            # format.html { render action: 'new'  }
-          # end
+          else
+            flash.now.alert = "Please fill in all the required boxes"
+            format.html { render action: 'new'  }
+          end
         end
 
     end
@@ -48,6 +48,52 @@ class MessagesController < ApplicationController
     end
 
     def application_params
-      params[:application]
+      params[:application].permit(:firstname,  
+            :lastname,  
+            :hebname,  
+            :DOB,
+            :place_of_birth,  
+            :age, 
+            :grade,  
+            :school, 
+              :address,  
+        :city,  
+        :prov,  
+        :ZIP,  
+        :home_phone,  
+        :camper_cell,   
+        :camper_email,  
+        :emg_contact,  
+        :emg_contact_phone,  
+
+        :health_card,  
+        :med_info,  
+        :other_info,  
+        :ref1,  
+        :ref1_school_phone,  
+        :ref1_phone,  
+        :ref2,  
+        :ref2_school_phone,  
+        :ref2_phone,  
+
+        :father,   
+        :d_marital_status,  
+        :d_occupation,  
+        :d_h_phone,  
+        :d_cell,  
+        :d_b_phone,   
+        :d_email,   
+
+
+        :mother,  
+        :m_marital_status,  
+        :m_occupation,  
+        :m_h_phone,  
+        :m_cell,  
+        :m_b_phone,   
+        :m_email,   
+
+        :synagogue,  
+        :rabbi, :session   )
     end
 end

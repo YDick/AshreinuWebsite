@@ -3,11 +3,11 @@
 <h3>General Information</h3>
 <div class="form-group">
   <label for="name">Child's Last Name</label>
-  <%= f.text_field :lastname,  class:"form-control"%> </p>
+  <%= f.text_field :lastname,  class:"form-control", :required => true%> </p>
 </div>
 <div class="form-group">
   <label for="name">First Name</label>
-  <%= f.text_field :firstname, class:"form-control"%> </p>
+  <%= f.text_field :firstname, class:"form-control", :required => true%> </p>
 </div>
 
 <div class="form-group">
@@ -17,7 +17,7 @@
 <br />
 <div class="form-group">
   <label for="DOB">Date of Birth</label>
-  <%= f.date_select :DOB, class:"form-control", start_year: Date.today.year - 25 , end_year: Date.today.year - 2%> </p>
+  <%= f.date_select :DOB, class:"form-control", start_year: Date.today.year - 25 , end_year: Date.today.year - 2, , :required => true%> </p>
 </div>
 
 <div class="form-group">
@@ -223,8 +223,8 @@
 
 <br>
 <div class="form-group">
-  <label for="session"><h3>Session</h3></label>
-  <%= f.text_field :session, class:"form-control"  %> </p>
+  <label for="session"><h3>Session Attending</h3></label>
+  <%= f.text_field :session, class:"form-control" , :required => true %> </p>
 </div>
 
 <br>

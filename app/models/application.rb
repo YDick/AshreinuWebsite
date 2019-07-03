@@ -1,7 +1,49 @@
 class Application < ApplicationRecord
-    include ActiveModel::Model
-    attr_accessor :name, :email, :phone_number, :body
-    # validates :name, :email, :body, presence: true
-    canadian_postal_code = /\A[ABCEGHJKLMNPRSTVXY]{1}\\d{1}[A-Z]{1}[ -]?\\d{1}[A-Z]{1}\\d{1}\z/
-    validates :ZIP, format: { with: canadian_postal_code }
+  include ActiveModel::Model
+  attr_accessor :firstname,
+                :lastname,
+                :hebname,
+                :DOB,
+                :place_of_birth,
+                :age,
+                :grade,
+                :school,
+                :address,
+                :city,
+                :prov,
+                :ZIP,
+                :home_phone,
+                :camper_cell,
+                :camper_email,
+                :emg_contact,
+                :emg_contact_phone,
+                :health_card,
+                :med_info,
+                :other_info,
+                :ref1,
+                :ref1_school_phone,
+                :ref1_phone,
+                :ref2,
+                :ref2_school_phone,
+                :ref2_phone,
+                :father,
+                :d_marital_status,
+                :d_occupation,
+                :d_h_phone,
+                :d_cell,
+                :d_b_phone,
+                :d_email,
+                :mother,
+                :m_marital_status,
+                :m_occupation,
+                :m_h_phone,
+                :m_cell,
+                :m_b_phone,
+                :m_email,
+                :synagogue,
+                :rabbi, :session
+
+  validates :firstname, :lastname, presence: true
+  canadian_postal_code = /\A[ABCEGHJKLMNPRSTVXY]{1}\\d{1}[A-Z]{1}[ -]?\\d{1}[A-Z]{1}\\d{1}\z/
+  validates :ZIP, format: { with: canadian_postal_code }
 end

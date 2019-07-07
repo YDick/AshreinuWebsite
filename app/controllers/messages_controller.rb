@@ -13,9 +13,9 @@ class MessagesController < ApplicationController
         format.html { redirect_to(root_path) }
         MailerMailer.with(message: params[:message]).auto_reply.deliver
         format.html
-        flash.alert = "Success"
+        puts "Success"
       else
-        flash.now.alert = "Please fill in all the required boxes"
+        puts "Please fill in all the required boxes"
         format.html { render action: "new" }
       end
     end
@@ -30,7 +30,7 @@ class MessagesController < ApplicationController
     @apply = Application.new(application_params)
 
     respond_to do |format|
-      if @apply.save
+      if @apply.valid?
         MailerMailer.with(application: params[:application]).application.deliver
         puts "success"
         format.html { redirect_to(root_path) }

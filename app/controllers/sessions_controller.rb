@@ -2,6 +2,7 @@ class SessionsController < ApplicationController
     def new
     end
 
+    # 
     def create
         u = Fundraiser.find_by(username: params[:session][:username])
 

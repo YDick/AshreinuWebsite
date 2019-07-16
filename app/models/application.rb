@@ -43,7 +43,7 @@ class Application < ApplicationRecord
                 :synagogue,
                 :rabbi, :session
 
-  # validates :firstname, :lastname, presence: true
+  # validates :firstname, :lastname, presence: true`
   # canadian_postal_code = /\A[ABCEGHJKLMNPRSTVXY]{1}\\d{1}[A-Z]{1}[ -]?\\d{1}[A-Z]{1}\\d{1}\z/
   # validates :ZIP, format: { with: canadian_postal_code }
 end

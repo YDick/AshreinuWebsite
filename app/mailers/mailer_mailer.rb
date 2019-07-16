@@ -19,7 +19,7 @@ class MailerMailer < ApplicationMailer
 
     def application
       @params = params[:application]
-      mail(to: "joodeek@gmail.com", subject: @params[:lastname] + Application Form!')
+      mail(to: "joodeek@gmail.com", subject: @params[:firstname] + @params[:lastname] + ' Application Form!')
     end
 
     

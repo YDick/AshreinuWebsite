@@ -50,10 +50,10 @@ class MessagesController < ApplicationController
   end
 
   def application_params
-    params[:application].permit(:firstname,
+    params.require(:application).permit(:firstname,
                                 :lastname,
                                 :hebname,
-                                :DOB,
+                                # :DOB,
                                 :place_of_birth,
                                 :age,
                                 :grade,

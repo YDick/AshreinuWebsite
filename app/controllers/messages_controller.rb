@@ -53,7 +53,7 @@ class MessagesController < ApplicationController
     params.require(:application).permit(:firstname,
                                 :lastname,
                                 :hebname,
-                                # :DOB,
+                                :DOB,
                                 :place_of_birth,
                                 :age,
                                 :grade,

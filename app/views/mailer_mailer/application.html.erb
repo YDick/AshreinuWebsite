@@ -2,9 +2,13 @@
 <html>
   <head>
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+      <link rel="stylesheet" type="text/css" href="applicationform.css">
   </head>
   <body>
     <h1>Application Form!</h1>
-    <%= @params%>
+    <% @params.each do |item| %>
+      <p><%=item[0]%>: <%= item[1]%></p>
+    <% end %>
+
   </body>
 </html>

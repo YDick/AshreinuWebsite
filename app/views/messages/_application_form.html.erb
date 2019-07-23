@@ -18,7 +18,7 @@
 <div class="form-group">
   <label for="DOB">Date of Birth</label>
   <%= f.date_select :DOB, class:"form-control", start_year: Date.today.year - 25 , end_year: Date.today.year - 2 %> </p>
-</div> %> 
+</div>
 
 <div class="form-group">
   <label for="place_of_birth">Place of Birth</label>
@@ -98,7 +98,7 @@
   <p>Is there any special information which is important to know?</p>
 <div class="form-group">
   <label for="med_info">Medical:</label>
-  <%= f.text_field :med_info, class:"form-control"  %> </p>
+  <%= f.text_field :med_info, class:"form-control",  :cols => "10", :rows => "10" %> </p>
 </div>
 
 <div class="form-group">

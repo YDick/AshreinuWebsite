@@ -28,7 +28,7 @@ class MessagesController < ApplicationController
 
   def postapply
     @apply = Application.new(application_params)
-
+    print @apply.inspect+"..............................................................."
     respond_to do |format|
       if @apply.valid?
         MailerMailer.with(application: params[:application]).application.deliver

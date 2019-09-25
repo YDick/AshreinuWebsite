@@ -61,22 +61,29 @@
 //  margin-right: 11px;
 
 // }
-@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
 
 
 .navbar {
    position: fixed;
    transition: top 0.3s;
+   position: center;
+}
 
+.navbar-nav.navbar-center {
+   position: absolute;
+   left: 50%;
+   transform: translatex(-50%);
 }
 
 .navbar-brand img {
    margin-top: -15px;
-   height: 50px;
+   height: 70px;
 }
 
 .navbar a {
-   font-family: 'Indie Flower', cursive;
+   font-family: 'Questrial', 'Comfortaa', cursive;
    font-size: 17px;
    font-weight: 700;
    color: black;

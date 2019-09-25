@@ -34,16 +34,17 @@
       <div class="container-fluid">
 
         <div class="navbar-header">
-          <a class="navbar-brand" href="<%=root_path%>"><img
-              src="http://www.campashreinu.ca/wp-content/uploads/2014/01/logo.png" alt="Ashreinu Logo"></a>
+          <a class="navbar-brand" href="<%=root_path%>">
+          <%= image_tag("ashreinu-logo-alone.png", size: "100x90")%>
+          </a>
 
           <%if false%>
           <img src="http://www.campashreinu.ca/wp-content/uploads/2014/01/logo.png" alt="Ashreinu Logo">
-          <%= image_tag("ashreinu_logo.jpg")%>
-          <%end%>
+          <%= image_tag("ashreinu-logo-alone.png")%>
+          <%end %>
         </div>
 
-        <ul class="nav navbar-nav">
+        <ul class="nav navbar-nav navbar-center">
           <li>
             <a href=<%= about_path %>>About</a>
           </li>

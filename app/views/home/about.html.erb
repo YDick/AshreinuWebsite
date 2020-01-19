@@ -39,7 +39,7 @@
                             levels of Judaism live a joyfully Jewish summer.</p>
                         <p>As our slogan goes: Ashreinu - Live it, experience it!</p>
                         <p>Ashreinu prides itself for being the only Jewish outreach overnight camp in Canada.</p>
-                        <a href=<%= apply_path %> class="btn btn-default btn-primary" id="night-app">Apply Now!</a>
+                        <%= button_to "Apply Now!", apply_path, method: :get, class: "btn btn-default btn-primary", id: "night-app" %>
                     </div>
                 </div>
             </div>
@@ -58,7 +58,7 @@
                             Judaism.
                             Kosher meals and snacks are provided. The bond the forge with staff members will last
                             throughout the year! </p>
-                        <button class="btn btn-default btn-primary" id="day-app">Apply Now!</button>
+                        <%= button_to "Apply Now!", apply_path, method: :get, class: "btn btn-default btn-primary", id: "day-app" %>
                     </div>
                 </div>
             </div>

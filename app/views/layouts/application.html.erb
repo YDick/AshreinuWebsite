@@ -69,17 +69,12 @@
       </div>
     </nav>
 
+      <div class="content">
+      <%= yield %>
+      </div>
 
-  <% if controller_name == "home" %>
-  <%render partial: "slideshow"%>
+
   </div>
-  <% end %>
-
-  <div class="content">
-    <%= yield %>
-  </div>
-
-</div>
 
 </body>
 <!-- Site footer -->

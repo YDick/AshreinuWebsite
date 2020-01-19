@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'map/view'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'home#about'
-  get "/apply" => "messages#apply"
+  get "/apply" => "messages#apply", as: "apply"
   post "/apply" => "messages#postapply"
 
   resources :fundraisers

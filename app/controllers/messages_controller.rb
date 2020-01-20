@@ -14,8 +14,8 @@ class MessagesController < ApplicationController
               MailerMailer.with(message: params[:message]).auto_reply.deliver    
               format.html 
             else
-              flash.now.alert = "Please fill in all the required boxes"
               format.html { render action: 'new'  }
+              flash.now.alert = "Please fill in all the required boxes"
             end
           end
     end

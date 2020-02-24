@@ -81,7 +81,7 @@
 
 /* Style the back side */
 .flip-card-back {
-  background-color: #a16a7f;
+  background-color: #9EBC9F;
   color: #000;
   // color: white !important;
   transform: rotateY(180deg);
@@ -97,6 +97,11 @@
   // paralax floating
   // z-index: 0;
 }
+
+
+.app_link {
+  color: #004E89;
+} 
 
 
 .card-container {

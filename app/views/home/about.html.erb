@@ -1,14 +1,3 @@
-<%# 
-<div class = "landing">
-    <div class = "landing-inner">
-        <h1 class="ml15">
-        <span class="word">Camp</span>
-        <span class="word">Ashreinu</span>
-        </h1>   
-    </div>
-</div> %>
-
-
 <div class="about">
     <h1>
         About Us
@@ -39,8 +28,8 @@
                             levels of Judaism live a joyfully Jewish summer.</p>
                         <p>As our slogan goes: Ashreinu - Live it, experience it!</p>
                         <p>Ashreinu prides itself for being the only Jewish outreach overnight camp in Canada.</p>
-                        <%= button_to "Apply Now!", apply_path, method: :get, class: "btn btn-default btn-primary", id: "night-app" %>
-                    </div>
+                            <p><%= link_to 'Download the 2020 overnight camp application','/Ashreinu_2020_night_application.pdf', download: '', class: "app_link" %> </p>
+                   </div>
                 </div>
             </div>
         </div>
@@ -58,7 +47,7 @@
                             Judaism.
                             Kosher meals and snacks are provided. The bond the forge with staff members will last
                             throughout the year! </p>
-                        <%= button_to "Apply Now!", apply_path, method: :get, class: "btn btn-default btn-primary", id: "day-app" %>
+                        <p><%= link_to 'Download the 2020 day camp application','/Ashreinu_2020_day_application.pdf', download: '', class: "app_link" %></p>
                     </div>
                 </div>
             </div>
